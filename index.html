@@ -19,26 +19,56 @@
     <body>
 
         <div class="container p-5">
-            <h3 class="fw-bolder b">Bienvenido a nuestras consultas loleras 🤖</h1>
+            <h3 class="fw-bolder b">Bienvenido a nuestras consultas loleras </h1>
             <hr>
 
             <section>
-                Pagina creada para realizar consultas en base a informacion del juego League of legends
-
+                Pagina creada para realizar consultas en base a informacion del juego <a href="https://www.leagueoflegends.com/">League of legends</a> <br>
+                La base de datos consiste en informacion sacada de partidas clasificatorias de este juego, y consiste en estadistica por equipo, por partida, por campeon entre otros.
+               <p class="b">Las tablas de la base de datos contienen la siguiente informacion</p> 
             </section>
+            <div class="container">
+
+              <div class="row">
+
+                  <div class="col-9">
+                    <ul>
+                      <li>champs</li>
+                      <li>matches</li>
+                      <li>participants</li>
+                      <li>stats1</li>
+                      <li>stats2</li>
+                      <li>teambans</li>
+                      <li>teamstasts</li>
+                    </ul>
+                  </div>
+                  <div class="col-1">
+                    <img src="https://giffiles.alphacoders.com/531/53140.gif" alt="" style="width: 130px; margin-top: 50px;">
+                
+                  </div>
+
+              </div>
+         
+              <div>
+
+              </div>
+
+
+            </div>
             <p>
                 Proyecto de base de datos realizados por Jorge Cruces y Tomas Vatel. 
             </p>
 
+            <h3 class="b">Consultas</h3>
         <div class="card m-2" >
             <div class="card-body" >
-              <h5 class="card-title b">Consulta #1 </h5>
-              <h6 class="card-subtitle mb-2 text-muted">Traer todos los campeones rotos</h6>
+              <h5 class="card-title b">#1 </h5>
+              <h6 class="card-subtitle mb-2 ">¿Cuántas veces fue baneado un campeón en las partidas??</h6>
 
               <form action="consulta1.php" method="get">
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Nombre del campeon</label>
-                  <input class="form-control" id="exampleInputPassword1">
+                  <label for="exampleInputPassword1" class="form-label text-muted">Ingrese nombre del campeon</label>
+                  <input class="form-control" id="exampleInputPassword1" placeholder="Ej: Darius">
                 </div>
                 <button type="submit" class="btn btn-primary">Consultar</button>
               </form>
@@ -48,36 +78,49 @@
           
         <div class="card m-2" >
             <div class="card-body" >
-              <h5 class="card-title b">Consulta #2 </h5>
-              <h6 class="card-subtitle mb-2 text-muted">Traer todos los campeones rotos</h6>
+              <h5 class="card-title b">#2</h5>
+              <h6 class="card-subtitle mb-2 ">¿Cuál fueron los n campeones más usado durante las partidas?</h6>
 
               <form action="consulta1.php" method="get">
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Nombre del campeon</label>
-                  <input class="form-control" id="exampleInputPassword1">
+                  <label for="exampleInputPassword1" class="form-label text-muted"> Numero de campeones mas usados </label>
+                  <input class="form-control" id="exampleInputPassword1" type="number" placeholder="1">
                 </div>
+                <button type="submit" class="btn btn-primary">Consultar</button>
+              </form>
+
+            </div>
+          </div>
+                    
+        <div class="card m-2" >
+            <div class="card-body" >
+              <h5 class="card-title b">#3</h5>
+              <h6 class="card-subtitle mb-2 ">Duracion de las partida donde un equipo obtuvo el primer objetivo</h6>
+
+              <form action="consulta1.php" method="get">
+                <label for="exampleInputPassword1" class="form-label text-muted"> Elija equipo:</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Equipo </option>
+                <option value="1">Rojo</option>
+                <option value="2">Azul</option>
+              </select>
+              
+              <br>
+   <label for="exampleInputPassword1" class="form-label text-muted"> Elija Objetivo:</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Objetivo </option>
+                <option value="1">Torre</option>
+                <option value="2">Inhibidor</option>
+              </select>
+              <br>
+              
+               
                 <button type="submit" class="btn btn-primary">Consultar</button>
               </form>
 
             </div>
           </div>
           
-
-        <div class="card m-2" >
-            <div class="card-body" >
-              <h5 class="card-title b">Consulta #3 </h5>
-              <h6 class="card-subtitle mb-2 text-muted">Traer todos los campeones rotos</h6>
-
-              <form action="consulta1.php" method="get">
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Nombre del campeon</label>
-                  <input class="form-control" id="exampleInputPassword1">
-                </div>
-                <button type="submit" class="btn btn-primary">Consultar</button>
-              </form>
-
-            </div>
-          </div>
         
    
         <scripts>
