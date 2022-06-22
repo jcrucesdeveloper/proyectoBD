@@ -42,15 +42,21 @@
     <?php
          try {
 
+
+           $campeon = $_POST["campeon"];
            $posicion = $_POST["posicion"];
-           $pdo = new PDO('pgsql:
-                           host=cc3201.dcc.uchile.cl;
-                           port=5534;
+               $pdo = new PDO('pgsql:
+                           host=localhost;
+                           port=5432;
                            dbname=cc3201;
                            user=cc3201;
                            password=cacatua123');
             
-            $stmt = $pdo->prepare("SELECT * FROM champs WHERE nombre=:campeon");
+            $stmt = $pdo->prepare("SELECT nombre, position, count FROM champion_position_view, champs
+            WHERE championid = id 
+            AND nombre =:campeon");
+
+            $stmt->bindValue(':campeon', $campeon); // Se enlaza al valor Morgan
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $stmt->execute();
          }
@@ -62,21 +68,22 @@
     <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Campeon</th>
-      <th scope="col">Rol</th>
       <th scope="col">Posicion</th>
+      <th scope="col">Veces jugado en esa posicion</th>
     </tr>
   </thead>
   <tbody>
-    <?php
-                
-                while ($row = $result->fetch()) {
+        <?php
+            while ($row = $stmt->fetch()){
+
                     echo '<tr>';
-                    echo '<th scope="row">' . $row[0] .'</th>';
-                    echo '<td>' .$row[1] . '</td>';
+                    echo '<td>' .$row["nombre"] . '</td>';
+                    echo '<td>' .$row["position"] . '</td>';
+                    echo '<td>' .$row["count"] . '</td>';
                     echo '</tr>';
-                }
+
+            }
                 ?>
    
   </tbody>

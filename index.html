@@ -39,8 +39,6 @@
                       <li>champs</li>
                       <li>matches</li>
                       <li>participants</li>
-                      <li>stats1</li>
-                      <li>stats2</li>
                       <li>teambans</li>
                       <li>teamstasts</li>
                     </ul>
@@ -86,13 +84,8 @@
 
               <form action="consulta2.php" method="post">
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label text-muted"> Posicion:</label>
-                    <select name="posicion">
-                      <option value="TOP">TOP</option>
-                      <option value="JUNGLE">JUNGLA</option>
-                      <option value="MID">MID</option>
-                      <option value="BOT">BOT</option>
-                    </select>
+                  <label for="exampleInputPassword1" class="form-label text-muted">Ingrese nombre del campeon</label>
+                  <input class="form-control" id="exampleInputPassword1" name="campeon" placeholder="Ej: Darius">
                 </div>
                 <button type="submit" class="btn btn-primary">Consultar</button>
               </form>
