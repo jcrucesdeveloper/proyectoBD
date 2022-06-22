@@ -64,7 +64,7 @@
             echo $e->getMessage();
         }
     ?>
-    <h3 class="b"> Resultados consulta # 2: Campeon mas usado de la posicion <?php isset($_POST["posicion"]) ? print $_POST["posicion"] : ""; ?> </h3>
+    <h3 class="b"> Resultados consulta # 2: Veces en que se uso un campeon en cada posicion <?php isset($_POST["posicion"]) ? print $_POST["posicion"] : ""; ?> </h3>
     <table class="table table-striped">
   <thead>
     <tr>
