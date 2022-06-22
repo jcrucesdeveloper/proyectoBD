@@ -66,12 +66,12 @@
         <div class="card m-2" >
             <div class="card-body" >
               <h5 class="card-title b">#1 </h5>
-              <h6 class="card-subtitle mb-2 ">¿Cuántas veces fue baneado un campeón en las partidas??</h6>
+              <h6 class="card-subtitle mb-2 ">¿Cuántas veces fue baneado un campeón en las partidas?</h6>
 
               <form action="consulta1.php" method="get">
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label text-muted">Ingrese nombre del campeon</label>
-                  <input class="form-control" id="exampleInputPassword1" placeholder="Ej: Darius">
+                  <input class="form-control" id="exampleInputPassword1" name="campeon" placeholder="Ej: Darius">
                 </div>
                 <button type="submit" class="btn btn-primary">Consultar</button>
               </form>
@@ -82,12 +82,17 @@
         <div class="card m-2" >
             <div class="card-body" >
               <h5 class="card-title b">#2</h5>
-              <h6 class="card-subtitle mb-2 ">¿Cuál fueron los n campeones más usado durante las partidas?</h6>
+              <h6 class="card-subtitle mb-2 ">¿Cuál es el campeon mas usado segun posicion?</h6>
 
-              <form action="consulta1.php" method="get">
+              <form action="consulta2.php" method="post">
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label text-muted"> Numero de campeones mas usados </label>
-                  <input class="form-control" id="exampleInputPassword1" type="number" placeholder="1">
+                  <label for="exampleInputPassword1" class="form-label text-muted"> Posicion:</label>
+                    <select name="posicion">
+                      <option value="TOP">TOP</option>
+                      <option value="JUNGLE">JUNGLA</option>
+                      <option value="MID">MID</option>
+                      <option value="BOT">BOT</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Consultar</button>
               </form>
@@ -100,20 +105,24 @@
               <h5 class="card-title b">#3</h5>
               <h6 class="card-subtitle mb-2 ">Duracion de las partida donde un equipo obtuvo el primer objetivo</h6>
 
-              <form action="consulta1.php" method="get">
+              <form action="consulta3.php" method="post">
                 <label for="exampleInputPassword1" class="form-label text-muted"> Elija equipo:</label>
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Default select example" name="equipo">
                 <option selected>Equipo </option>
-                <option value="1">Rojo</option>
-                <option value="2">Azul</option>
+                <option value="rojo">Rojo</option>
+                <option value="azul">Azul</option>
               </select>
               
               <br>
    <label for="exampleInputPassword1" class="form-label text-muted"> Elija Objetivo:</label>
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Default select example" name="objetivo">
                 <option selected>Objetivo </option>
-                <option value="1">Torre</option>
-                <option value="2">Inhibidor</option>
+                <option value="firstblood">Primera Sangre</option>
+                <option value="firsttower">Torre</option>
+                <option value="firstinhib">Inhibidor</option>
+                <option value="firstbaron">Baron</option>
+                <option value="firstdragon">Dragon</option>
+                <option value="firstharry">Heraldo</option>
               </select>
               <br>
               
